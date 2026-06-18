@@ -431,19 +431,63 @@ Thank you.`;
   }
 
   setTimeout(() => {
-    // Show user-friendly confirmation popup
-    alert("Your tour has been submitted successfully. Our team will contact you as soon as possible within 24 hours.");
-    
-    const encodedSubject = encodeURIComponent(subject);
-    const encodedBody = encodeURIComponent(mailBody);
-    window.location.href = `mailto:info@kmstoures.com?subject=${encodedSubject}&body=${encodedBody}`;
-    
-    // Reset form & button
-    form.reset();
-    if (originalButton) {
-      originalButton.disabled = false;
-      originalButton.style.opacity = "";
-      originalButton.innerHTML = originalButtonText;
-    }
+    // Show premium modal popup and trigger email client after 5 seconds
+    showSuccessModal(() => {
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(mailBody);
+      window.location.href = `mailto:info@kmstoures.com?subject=${encodedSubject}&body=${encodedBody}`;
+      
+      // Reset form & button
+      form.reset();
+      if (originalButton) {
+        originalButton.disabled = false;
+        originalButton.style.opacity = "";
+        originalButton.innerHTML = originalButtonText;
+      }
+    });
   }, 800);
+}
+
+/* Premium Success Modal Manager (5 seconds stay) */
+function showSuccessModal(onComplete) {
+  let modal = document.getElementById("custom-success-modal");
+  
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "custom-success-modal";
+    modal.className = "custom-modal-overlay";
+    modal.innerHTML = `
+      <div class="custom-modal-card">
+        <div class="custom-modal-icon">
+          <i class="far fa-check-circle"></i>
+        </div>
+        <h3>Submission Successful</h3>
+        <p>Your tour has been submitted successfully. Our team will contact you as soon as possible within 24 hours.</p>
+        <div class="custom-modal-timer-bar">
+          <div class="timer-progress"></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  } else {
+    // Reset timer animation if modal is reused
+    const progress = modal.querySelector(".timer-progress");
+    if (progress) {
+      progress.style.animation = 'none';
+      progress.offsetHeight; // trigger reflow
+      progress.style.animation = null;
+    }
+  }
+
+  // Show modal
+  modal.classList.add("active");
+
+  // Wait 5 seconds, then dismiss and callback
+  setTimeout(() => {
+    modal.classList.remove("active");
+    // Wait for fadeout transition
+    setTimeout(() => {
+      onComplete();
+    }, 400);
+  }, 5000);
 }
