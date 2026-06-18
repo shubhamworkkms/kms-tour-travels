@@ -1522,3 +1522,25 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+/* Phone Prefix Input Group */
+.phone-input-group {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.phone-input-group .form-control {
+  padding-left: 54px !important;
+}

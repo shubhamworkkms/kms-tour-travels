@@ -391,7 +391,7 @@ function initContactPage() {
 function handleInquirySubmission(form, packageName = "", mode = "email") {
   const formData = new FormData(form);
   const name = formData.get("name") || "";
-  const phone = formData.get("phone") || "";
+  const phone = "+91 " + (formData.get("phone") || "");
   const email = formData.get("email") || "";
   const travelDate = formData.get("travel_date") || "Not Specified";
   const travelers = formData.get("travelers") || "1";
