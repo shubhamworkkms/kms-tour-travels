@@ -164,7 +164,7 @@
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number *</label>
-                <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                <input type="tel" name="phone" class="form-control" placeholder="Enter phone number (numbers only)" required pattern="[0-9]{10,15}" inputmode="numeric" title="Please enter a valid phone number (digits only, 10-15 characters)">
               </div>
               <div class="form-group">
                 <label for="email">Email Address *</label>
@@ -182,10 +182,7 @@
                 <label for="message">Custom Details / Message</label>
                 <textarea name="message" class="form-control" rows="4" required></textarea>
               </div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-                <button type="button" class="btn btn-whatsapp" id="detail-whatsapp-btn" style="padding: 10px 5px; font-size: 0.82rem;"><i class="fab fa-whatsapp"></i> Via WhatsApp</button>
-                <button type="button" class="btn btn-primary btn-email" id="detail-email-btn" style="padding: 10px 5px; font-size: 0.82rem;"><i class="far fa-envelope"></i> Via Email</button>
-              </div>
+              <button type="submit" class="btn btn-primary btn-email" id="detail-email-btn" style="width: 100%; margin-top: 15px;"><i class="far fa-envelope"></i> Submit Booking Inquiry</button>
             </form>
           </div>
         </div>

@@ -124,7 +124,7 @@
           <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
             <div class="form-group">
               <label for="phone">Phone Number *</label>
-              <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+              <input type="tel" name="phone" class="form-control" placeholder="Enter phone number (numbers only)" required pattern="[0-9]{10,15}" inputmode="numeric" title="Please enter a valid phone number (digits only, 10-15 characters)">
             </div>
             <div class="form-group">
               <label for="email">Email Address *</label>
@@ -146,10 +146,7 @@
             <label for="message">Your Requirements / Details</label>
             <textarea name="message" class="form-control" rows="4" placeholder="Tell us if you want 3-star standard or luxury 5-star houseboats, favorite sightseeing spots, custom activities, etc..." required></textarea>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
-            <button type="button" class="btn btn-whatsapp" id="contact-whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Quote via WhatsApp</button>
-            <button type="button" class="btn btn-primary btn-email" id="contact-email-btn"><i class="far fa-envelope"></i> Send via Email</button>
-          </div>        </form>
+          <button type="submit" class="btn btn-primary btn-email" id="contact-email-btn" style="width: 100%; margin-top: 15px;"><i class="far fa-envelope"></i> Submit Tour Inquiry</button>        </form>
       </div>
 
     </div>
