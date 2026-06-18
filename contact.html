@@ -141,12 +141,15 @@
               <input type="number" name="travelers" class="form-control" min="1" value="2">
             </div>
           </div>
+          
           <div class="form-group">
             <label for="message">Your Requirements / Details</label>
             <textarea name="message" class="form-control" rows="4" placeholder="Tell us if you want 3-star standard or luxury 5-star houseboats, favorite sightseeing spots, custom activities, etc..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;"><i class="fab fa-whatsapp"></i> Get Custom Quotes via WhatsApp</button>
-        </form>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+            <button type="button" class="btn btn-whatsapp" id="contact-whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Quote via WhatsApp</button>
+            <button type="button" class="btn btn-primary btn-email" id="contact-email-btn"><i class="far fa-envelope"></i> Send via Email</button>
+          </div>        </form>
       </div>
 
     </div>

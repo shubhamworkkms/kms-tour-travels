@@ -90,10 +90,23 @@ function initHomePage() {
   // Home quick inquiry form submission
   const homeInquiryForm = document.getElementById("home-inquiry-form");
   if (homeInquiryForm) {
-    homeInquiryForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      handleInquirySubmission(homeInquiryForm);
-    });
+    const waBtn = document.getElementById("home-whatsapp-btn");
+    const emailBtn = document.getElementById("home-email-btn");
+    
+    if (waBtn) {
+      waBtn.addEventListener("click", () => {
+        if (homeInquiryForm.reportValidity()) {
+          handleInquirySubmission(homeInquiryForm, "", "whatsapp");
+        }
+      });
+    }
+    if (emailBtn) {
+      emailBtn.addEventListener("click", () => {
+        if (homeInquiryForm.reportValidity()) {
+          handleInquirySubmission(homeInquiryForm, "", "email");
+        }
+      });
+    }
   }
 }
 
@@ -358,10 +371,23 @@ function initPackageDetailsPage() {
       messageField.value = `Hello, I am interested in inquiring about the "${pkg.name}" (${pkg.duration}). Please share customized quotes for standard, deluxe, and luxury categories.`;
     }
 
-    detailInquiryForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      handleInquirySubmission(detailInquiryForm, pkg.name);
-    });
+    const waBtn = document.getElementById("detail-whatsapp-btn");
+    const emailBtn = document.getElementById("detail-email-btn");
+    
+    if (waBtn) {
+      waBtn.addEventListener("click", () => {
+        if (detailInquiryForm.reportValidity()) {
+          handleInquirySubmission(detailInquiryForm, pkg.name, "whatsapp");
+        }
+      });
+    }
+    if (emailBtn) {
+      emailBtn.addEventListener("click", () => {
+        if (detailInquiryForm.reportValidity()) {
+          handleInquirySubmission(detailInquiryForm, pkg.name, "email");
+        }
+      });
+    }
   }
 }
 
@@ -369,15 +395,28 @@ function initPackageDetailsPage() {
 function initContactPage() {
   const contactForm = document.getElementById("contact-inquiry-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      handleInquirySubmission(contactForm);
-    });
+    const waBtn = document.getElementById("contact-whatsapp-btn");
+    const emailBtn = document.getElementById("contact-email-btn");
+    
+    if (waBtn) {
+      waBtn.addEventListener("click", () => {
+        if (contactForm.reportValidity()) {
+          handleInquirySubmission(contactForm, "", "whatsapp");
+        }
+      });
+    }
+    if (emailBtn) {
+      emailBtn.addEventListener("click", () => {
+        if (contactForm.reportValidity()) {
+          handleInquirySubmission(contactForm, "", "email");
+        }
+      });
+    }
   }
 }
 
-/* Inquiry Form Submission WhatsApp Redirect Logic */
-function handleInquirySubmission(form, packageName = "") {
+/* Inquiry Form Submission Logic (WhatsApp or Email) */
+function handleInquirySubmission(form, packageName = "", mode = "whatsapp") {
   const formData = new FormData(form);
   const name = formData.get("name") || "";
   const phone = formData.get("phone") || "";
@@ -389,8 +428,9 @@ function handleInquirySubmission(form, packageName = "") {
   // Build inquiry context
   const pkgContext = packageName ? `Package: ${packageName}` : `General Tour Inquiry`;
 
-  // Construct structured text for WhatsApp
-  const textMsg = `Hello KMS Tour & Travels, I would like to submit a booking inquiry.
+  if (mode === "whatsapp") {
+    // Construct structured text for WhatsApp
+    const textMsg = `Hello KMS Tour & Travels, I would like to submit a booking inquiry.
 -----------------------------------
 *Inquiry details:*
 • *Context:* ${pkgContext}
@@ -403,25 +443,65 @@ function handleInquirySubmission(form, packageName = "") {
 -----------------------------------
 Please provide availability and custom pricing plans.`;
 
-  // Create temporary loading/success feedback
-  const originalButton = form.querySelector("button[type='submit']");
-  const originalButtonText = originalButton.innerHTML;
-  
-  originalButton.disabled = true;
-  originalButton.style.backgroundColor = "var(--accent-color)";
-  originalButton.innerHTML = `<i class="fab fa-whatsapp"></i> Redirecting to WhatsApp...`;
+    const originalButton = form.querySelector(".btn-whatsapp");
+    const originalButtonText = originalButton.innerHTML;
+    
+    originalButton.disabled = true;
+    originalButton.style.backgroundColor = "var(--accent-hover)";
+    originalButton.innerHTML = `<i class="fab fa-whatsapp"></i> Redirecting...`;
 
-  setTimeout(() => {
-    // Open WhatsApp in a new tab
-    const encodedText = encodeURIComponent(textMsg);
-    window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${encodedText}`, "_blank");
+    setTimeout(() => {
+      // Open WhatsApp in a new tab
+      const encodedText = encodeURIComponent(textMsg);
+      window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${encodedText}`, "_blank");
+      
+      // Reset form & button
+      form.reset();
+      originalButton.disabled = false;
+      originalButton.style.backgroundColor = "";
+      originalButton.innerHTML = originalButtonText;
+      
+      alert("Inquiry successfully prepared! We are redirecting you to WhatsApp to complete your message to local support.");
+    }, 800);
+  } else {
+    // Construct subject and body for Email (mailto)
+    const subject = `KMS Tour & Travels Inquiry - ${pkgContext}`;
+    const mailBody = `Hello KMS Tour & Travels,
+
+I would like to submit a booking inquiry.
+
+Inquiry details:
+-----------------------------------
+Context: ${pkgContext}
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Travel Date: ${travelDate}
+Number of Travelers: ${travelers}
+Customer Message: ${userMessage}
+-----------------------------------
+
+Please provide availability and custom pricing plans.
+
+Thank you.`;
+
+    const originalButton = form.querySelector(".btn-email");
+    const originalButtonText = originalButton.innerHTML;
     
-    // Reset form & button
-    form.reset();
-    originalButton.disabled = false;
-    originalButton.style.backgroundColor = "";
-    originalButton.innerHTML = originalButtonText;
-    
-    alert("Inquiry successfully prepared! We are redirecting you to WhatsApp to complete your message to local support.");
-  }, 1000);
+    originalButton.disabled = true;
+    originalButton.style.opacity = "0.7";
+    originalButton.innerHTML = `<i class="far fa-envelope"></i> Opening Email Client...`;
+
+    setTimeout(() => {
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(mailBody);
+      window.location.href = `mailto:info@kmstoures.com?subject=${encodedSubject}&body=${encodedBody}`;
+      
+      // Reset form & button
+      form.reset();
+      originalButton.disabled = false;
+      originalButton.style.opacity = "";
+      originalButton.innerHTML = originalButtonText;
+    }, 800);
+  }
 }

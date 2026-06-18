@@ -260,7 +260,10 @@
             <label for="message">Requirements / Message</label>
             <textarea name="message" class="form-control" rows="3" placeholder="Tell us about your budget, interest areas (Honeymoon, Family, Adventure)..."></textarea>
           </div>
-          <button type="submit" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Get Custom Quote via WhatsApp</button>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+            <button type="button" class="btn btn-whatsapp" id="home-whatsapp-btn"><i class="fab fa-whatsapp"></i> Get Quote via WhatsApp</button>
+            <button type="button" class="btn btn-primary btn-email" id="home-email-btn"><i class="far fa-envelope"></i> Send via Email</button>
+          </div>
         </form>
       </div>
     </div>

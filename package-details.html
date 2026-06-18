@@ -182,7 +182,10 @@
                 <label for="message">Custom Details / Message</label>
                 <textarea name="message" class="form-control" rows="4" required></textarea>
               </div>
-              <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;"><i class="fab fa-whatsapp"></i> Send Booking Inquiry</button>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
+                <button type="button" class="btn btn-whatsapp" id="detail-whatsapp-btn" style="padding: 10px 5px; font-size: 0.82rem;"><i class="fab fa-whatsapp"></i> Via WhatsApp</button>
+                <button type="button" class="btn btn-primary btn-email" id="detail-email-btn" style="padding: 10px 5px; font-size: 0.82rem;"><i class="far fa-envelope"></i> Via Email</button>
+              </div>
             </form>
           </div>
         </div>
