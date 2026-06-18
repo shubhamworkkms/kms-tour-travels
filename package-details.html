@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Package Details | KMS Toures&Travels</title>
+  <meta name="description" content="View day-wise itinerary, pricing, hotel categories, inclusions, exclusions, and FAQs for your customized Kashmir tour package.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container flex justify-between align-center">
+      <div class="contact-info">
+        <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
+        <a href="mailto:info@kmstoures.com"><i class="far fa-envelope"></i> info@kmstoures.com</a>
+      </div>
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header>
+    <div class="container navbar flex justify-between align-center">
+      <a href="index.html" class="logo">
+        <h1>KMS Toures&Travels</h1>
+        <p>Discover Paradise on Earth</p>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="packages.html" class="active">Tour Packages</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions align-center">
+        <a href="contact.html" class="btn btn-outline">Get Quote</a>
+        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Banner (Will update background visual dynamically) -->
+  <section class="page-banner" id="details-cover-image" style="padding: 100px 0;">
+    <div class="container">
+      <h1 id="details-title" style="font-size: 3.2rem; font-family: var(--font-body); font-weight: 800;">Loading Package Name...</h1>
+      <p id="details-subtitle" style="font-size: 1.2rem; margin-top: 10px; opacity: 0.95; font-weight: 500;">Loading Duration & Path...</p>
+    </div>
+  </section>
+
+  <!-- Details Layout Content -->
+  <section class="section-padding">
+    <div class="container grid details-layout">
+      
+      <!-- Main Content Area -->
+      <div class="details-main-content">
+        <div class="package-highlights-bar">
+          <div class="highlight-pill">
+            <i class="fas fa-clock"></i>
+            <div>
+              <small style="display:block; font-size:0.75rem; color:var(--text-muted)">Duration</small>
+              <span id="duration-badge">Loading...</span>
+            </div>
+          </div>
+          <div class="highlight-pill">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+              <small style="display:block; font-size:0.75rem; color:var(--text-muted)">Places Covered</small>
+              <span id="places-badge">Loading...</span>
+            </div>
+          </div>
+          <div class="highlight-pill">
+            <i class="fas fa-tag"></i>
+            <div>
+              <small style="display:block; font-size:0.75rem; color:var(--text-muted)">Starting Price</small>
+              <span id="price-badge">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="detail-sec-title">Package Overview</h2>
+        <p id="details-overview-text" style="color: #334155; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px;">Loading overview...</p>
+
+        <!-- Day Wise Itinerary -->
+        <h2 class="detail-sec-title">Day-Wise Plan & Itinerary</h2>
+        <div class="itinerary-timeline" id="itinerary-accordion-container">
+          <!-- Populated Dynamically via JS -->
+        </div>
+
+        <!-- Accommodation & Pricing -->
+        <h2 class="detail-sec-title">Hotel Categories & Starting Prices</h2>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 15px;">Pricing details correspond to per-person calculations and vary depending on season, category comfort, and traveler volume.</p>
+        <div class="pricing-table-container">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Hotel category</th>
+                <th>Starting Price</th>
+                <th>What to Expect</th>
+              </tr>
+            </thead>
+            <tbody id="pricing-table-body">
+              <!-- Dynamically Rendered -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Inclusions & Exclusions -->
+        <h2 class="detail-sec-title">What is Included & Excluded</h2>
+        <div class="grid inout-grid">
+          <div class="inout-card inclusions">
+            <h3><i class="far fa-check-circle"></i> Inclusions</h3>
+            <ul class="inout-list" id="inclusions-list">
+              <!-- Dynamically Rendered -->
+            </ul>
+          </div>
+          <div class="inout-card exclusions">
+            <h3><i class="far fa-times-circle"></i> Exclusions</h3>
+            <ul class="inout-list" id="exclusions-list">
+              <!-- Dynamically Rendered -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <h2 class="detail-sec-title">Frequently Asked Questions</h2>
+        <div class="faq-accordion" id="details-faq-container">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+
+      <!-- Sticky Booking Sidebar Form -->
+      <div class="details-sidebar">
+        <div class="sidebar-sticky">
+          <div class="booking-sidebar-card">
+            <div class="sidebar-price-banner">
+              <span>Package Price Starts At</span>
+              <h3 id="sidebar-starting-price">₹8,999</h3>
+            </div>
+            
+            <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 20px; text-align: center;">Book / Inquire Now</h3>
+            
+            <form id="detail-inquiry-form">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+              </div>
+              <div class="form-group">
+                <label for="travel_date">Travel Date *</label>
+                <input type="date" name="travel_date" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="travelers">No of Travelers</label>
+                <input type="number" name="travelers" class="form-control" min="1" value="2">
+              </div>
+              <div class="form-group">
+                <label for="message">Custom Details / Message</label>
+                <textarea name="message" class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;"><i class="fab fa-whatsapp"></i> Send Booking Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container grid footer-grid">
+      <div class="footer-column">
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Toures&Travels</h3>
+        <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family group tours, and adventure camping treks across the valley.</p>
+        <div class="social-icons-group">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="destinations.html">Popular Destinations</a></li>
+          <li><a href="hotels.html">Hotel Standard Options</a></li>
+          <li><a href="gallery.html">Media Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Kashmir Packages</h3>
+        <ul class="footer-links">
+          <li><a href="package-details.html?id=kashmir-3d">3 Days Kashmir Tour</a></li>
+          <li><a href="package-details.html?id=family-5d">5 Days Family Package</a></li>
+          <li><a href="package-details.html?id=honeymoon-6d">Romantic Honeymoon</a></li>
+          <li><a href="package-details.html?id=srinagar-gulmarg-pahalgam-6d">5N/6D Deluxe Tour</a></li>
+          <li><a href="package-details.html?id=complete-kashmir-7d">7 Days Complete Tour</a></li>
+          <li><a href="package-details.html?id=adventure-kashmir">7 Days Adventure Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Local Office</h3>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> <span>Rajbagh Near Dal Lake, Srinagar, Jammu & Kashmir 190001</span></li>
+          <li><i class="fas fa-phone-alt"></i> <span>+91 98765 43210</span></li>
+          <li><i class="far fa-envelope"></i> <span>info@kmstoures.com<br>support@kmstoures.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 KMS Toures&Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" class="floating-whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/packages-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
