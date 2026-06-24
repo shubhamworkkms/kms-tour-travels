@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KMS Tour & Travels | Discover Paradise on Earth (Kashmir Tour Packages 2026)</title>
+  <meta name="description"
+    content="KMS Tour & Travels provides premium Kashmir tour packages. Experience Srinagar, Gulmarg, Pahalgam, and Sonamarg with local experts, custom packages, and 24x7 support.">
+  <meta name="keywords"
+    content="Kashmir Tour Packages, Kashmir Family Tour, Kashmir Honeymoon Package, Kashmir Trip Cost, Srinagar Gulmarg Pahalgam Tour, Best Kashmir Tour Package">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbar.js"></script>
+</head>
+
+<body>
+
+  <!-- Dynamic Navbar component -->
+  <app-navbar></app-navbar>
+
+  <!-- Hero Section -->
+  <section class="hero-custom">
+    <div class="container">
+      <!-- Centered Content -->
+      <div class="hero-text-content">
+        <span class="hero-custom-badge"><i class="fas fa-certificate"></i> Premium Travel Agency</span>
+        <h1 class="hero-title">Explore Incredible Kashmir...</h1>
+        <p class="hero-subtitle">Discover the breathtaking beauty, rich culture, and diverse landscapes of India. We
+          curate personalized journeys that go beyond the horizon, ensuring unforgettable memories.</p>
+
+        <ul class="hero-features-list">
+          <li><i class="fas fa-check-circle"></i> Customized Itineraries</li>
+          <li><i class="fas fa-check-circle"></i> Best Price Guarantee</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 Travel Support</li>
+        </ul>
+
+        <div class="hero-ctas">
+          <a href="packages.html" class="btn btn-primary">Explore Packages</a>
+          <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tour Packages -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Featured Tour Packages</h2>
+        <p>Handpicked packages designed to give you the best Kashmir experience with transparent pricing and
+          customizable itineraries.</p>
+      </div>
+
+      <div class="grid packages-grid" id="featured-packages-container">
+        <!-- Dynamically Rendered via JS -->
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="packages.html" class="btn btn-outline">Explore All Kashmir Packages <i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations Grid -->
+  <section class="section-padding" style="background-color: var(--bg-light);">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Popular Destinations</h2>
+        <p>Explore the gems of Kashmir, from historical Mughal gardens to the extreme snowy peaks and meadows.</p>
+      </div>
+
+      <div class="grid destinations-grid">
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/srinagar.png" alt="Srinagar">
+          <div class="destination-overlay">
+            <h3>Srinagar</h3>
+            <span>Dal Lake, Mughal Gardens & Houseboats</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/gulmarg.png" alt="Gulmarg">
+          <div class="destination-overlay">
+            <h3>Gulmarg</h3>
+            <span>Skiing slopes, Gondola Ride & Snowy peaks</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/pahalgam.png" alt="Pahalgam">
+          <div class="destination-overlay">
+            <h3>Pahalgam</h3>
+            <span>Betaab Valley, Aru & Coniferous forests</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/sonamarg.png" alt="Sonamarg">
+          <div class="destination-overlay">
+            <h3>Sonamarg</h3>
+            <span>Thajiwas Glacier & Gateway to Zojila</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/yusmarg.png" alt="Yusmarg">
+          <div class="destination-overlay">
+            <h3>Yusmarg</h3>
+            <span>Meadow of Jesus, Doodhganga & Pine Trails</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/doodhpathri.png" alt="Doodhpathri">
+          <div class="destination-overlay">
+            <h3>Doodhpathri</h3>
+            <span>Valley of Milk, Shaliganga & Pine Meadows</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/gurez.png" alt="Gurez Valley">
+          <div class="destination-overlay">
+            <h3>Gurez Valley</h3>
+            <span>Habba Khatoon, Kishanganga River & Pristine Wilderness</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+        <div class="destination-card" onclick="window.location.href='destinations.html'">
+          <img src="assets/image/sinthan.png" alt="Sinthan Top">
+          <div class="destination-overlay">
+            <h3>Sinthan Top</h3>
+            <span>360° Himalayan views, Snow Pass & Scenic Drive</span>
+            <span class="btn btn-ghost">Explore Destination</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding why-choose-us">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Why Choose KMS Tour & Travels</h2>
+        <p>We are born and raised in Kashmir. We offer unparalleled local expertise and highly organized transport
+          packages.</p>
+      </div>
+
+      <div class="grid features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrap"><i class="fas fa-tags"></i></div>
+          <h3>Best Prices</h3>
+          <p>Direct associations with local hoteliers and self-owned vehicles guarantee you the absolute lowest cost in
+            the market.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap"><i class="fas fa-users-cog"></i></div>
+          <h3>Local Support</h3>
+          <p>Our on-ground local Kashmir support teams guide you at checkpoints, checkpoints, and pony rentals without
+            hidden cuts.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap"><i class="fas fa-sliders-h"></i></div>
+          <h3>Custom Packages</h3>
+          <p>Modify day-wise routes, hotel categories (3*, 4*, 5*), or add romantic elements. Design your travel plan
+            exactly your way.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap"><i class="fas fa-headset"></i></div>
+          <h3>24x7 Assistance</h3>
+          <p>Our helpdesk is awake and online around the clock. Get instant answers for road conditions, weather, and
+            dynamic flight shifts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section-padding testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>What Our Travelers Say</h2>
+        <p>Real stories from our happy travelers who trusted us to craft their dream vacations.</p>
+      </div>
+
+      <div class="grid testimonials-grid">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">PS</div>
+            <div class="testimonial-author">
+              <h4>Priya Sharma</h4>
+              <span>Mumbai</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"The Kashmir trip organized by KMS was simply magical. Every detail was perfectly planned — from the
+            shikara rides to the snow-capped mountain views. We will definitely book again!"</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">RA</div>
+            <div class="testimonial-author">
+              <h4>Raj &amp; Anita Patel</h4>
+              <span>Ahmedabad</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Our honeymoon was beyond perfect. The houseboat stay, the Gulmarg gondola ride, the private shikara sunset
+            cruise — KMS thought of everything. Truly a dream experience!"</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">SK</div>
+            <div class="testimonial-author">
+              <h4>Suresh Kumar</h4>
+              <span>Bengaluru</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"KMS organized our family trip to Kashmir with such reverence and attention to detail. The spiritual
+            journey was incredibly moving. All logistics were flawless."</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">AS</div>
+            <div class="testimonial-author">
+              <h4>Arjun Singh</h4>
+              <span>Pune</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Kashmir is tough to plan alone, but KMS made it easy. The itinerary was perfect for adventure seekers like
+            me. The trek to Thajiwas Glacier was epic!"</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">MR</div>
+            <div class="testimonial-author">
+              <h4>Dr. Meera Reddy</h4>
+              <span>Hyderabad</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"I've traveled with many agencies, but the transparency and care KMS provides is unmatched. Handpicked
+            hotels were excellent and the guides were knowledgeable."</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">VF</div>
+            <div class="testimonial-author">
+              <h4>The Verma Family</h4>
+              <span>Kolkata</span>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Kashmir was vibrant and relaxing. The kids had a blast, and the customized planning took all the stress
+            away. KMS truly understands family travel needs!"</p>
+        </div>
+      </div>
+
+      <!-- Mobile carousel dots (visible only on mobile) -->
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </section>
+
+  <!-- Quick Inquiry Form Section -->
+  <section class="section-padding quick-inquiry-section">
+    <div class="container grid inquiry-wrapper">
+      <div class="inquiry-info">
+        <h2>Book Your Kashmir Dream Vacation Today</h2>
+        <p>Planning a trip to Kashmir? Let our destination specialists design the perfect customized package for your
+          budget and timeline.</p>
+        <ul class="inquiry-bullets">
+          <li><i class="fas fa-check-circle"></i> 100% Custom Travel Itinerary</li>
+          <li><i class="fas fa-check-circle"></i> Direct WhatsApp Support Connect</li>
+          <li><i class="fas fa-check-circle"></i> Local Expert Drivers & Guided Visits</li>
+          <li><i class="fas fa-check-circle"></i> Instant Free Customized Quotes</li>
+        </ul>
+      </div>
+
+      <div class="inquiry-form-card" id="quick-inquiry">
+        <h3>Send Free Inquiry</h3>
+        <form id="home-inquiry-form">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <div class="phone-input-group">
+                <span class="phone-prefix">+91</span>
+                <input type="tel" name="phone" class="form-control" placeholder="10-digit mobile number" required
+                  pattern="[0-9]{10}" maxlength="10" inputmode="numeric"
+                  title="Please enter a valid 10-digit mobile number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="form-group">
+              <label for="travel_date">Travel Date *</label>
+              <input type="date" name="travel_date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="travelers">No of Travelers</label>
+              <input type="number" name="travelers" class="form-control" min="1" value="2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Requirements / Message</label>
+            <textarea name="message" class="form-control" rows="3"
+              placeholder="Tell us about your budget, interest areas (Honeymoon, Family, Adventure)..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-email" id="home-email-btn"
+            style="width: 100%; margin-top: 15px;"><i class="far fa-envelope"></i> Submit Tour Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container grid footer-grid">
+      <div class="footer-column">
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Tour & Travels</h3>
+        <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family
+          group tours, and adventure camping treks across the valley.</p>
+        <div class="social-icons-group">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="destinations.html">Popular Destinations</a></li>
+          <li><a href="gallery.html">Media Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Kashmir Packages</h3>
+        <ul class="footer-links">
+          <li><a href="package-details.html?id=kashmir-3d">3 Days Kashmir Tour</a></li>
+          <li><a href="package-details.html?id=family-5d">5 Days Family Package</a></li>
+          <li><a href="package-details.html?id=honeymoon-6d">Romantic Honeymoon</a></li>
+          <li><a href="package-details.html?id=srinagar-gulmarg-pahalgam-6d">5N/6D Deluxe Tour</a></li>
+          <li><a href="package-details.html?id=complete-kashmir-7d">7 Days Complete Tour</a></li>
+          <li><a href="package-details.html?id=adventure-kashmir">7 Days Adventure Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Local Office</h3>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> <span>Rajbagh Near Dal Lake, Srinagar, Jammu & Kashmir 190001</span>
+          </li>
+          <li><i class="fas fa-phone-alt"></i> <span>+91 98765 43210</span></li>
+          <li><i class="far fa-envelope"></i> <span>info@kmstoures.com<br>support@kmstoures.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 KMS Tour & Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir
+          Create Memories That Last Forever.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Buttons Stack -->
+  <div class="floating-contact-stack">
+    <a href="#" class="floating-whatsapp" title="WhatsApp Us">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919876543210" class="floating-phone" title="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Bottom Contact Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-btn-call"><i class="fas fa-phone-alt"></i> call</a>
+    <a href="https://api.whatsapp.com/send?phone=919876543210" class="mobile-btn-whatsapp" target="_blank"><i
+        class="fab fa-whatsapp"></i> whatsapp</a>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/packages-data.js?v=130"></script>
+  <script src="assets/js/main.js?v=130"></script>
+</body>
+
+</html>
