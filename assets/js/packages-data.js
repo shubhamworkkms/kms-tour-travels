@@ -6,7 +6,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg"],
     startingPrice: 8999,
     category: "Budget Tour",
-    image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_quick.png",
     overview: "Experience the ultimate quick getaway to Kashmir. Explore the charm of Srinagar's Dal Lake and the snow-capped peak excursions in Gulmarg in just 3 days.",
     inclusions: [
       "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
@@ -67,7 +67,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg"],
     startingPrice: 16300,
     category: "Family Tour",
-    image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_family.png",
     overview: "A perfectly paced, comfortable tour of the top destinations in Kashmir, ideal for families, kids, and senior citizens looking for premium comfort and beautiful memories.",
     inclusions: [
       "4 Nights accommodation (Srinagar base/Houseboat)",
@@ -143,7 +143,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg"],
     startingPrice: 28668,
     category: "Honeymoon Tour",
-    image: "https://images.unsplash.com/photo-1590053413809-51c385115c6e?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_honeymoon.png",
     overview: "A romantic, specially curated journey for couples. Features private luxury cab, candlelit dinners, room decorations, houseboat stay, and overnight stays in snowy Gulmarg and scenic Pahalgam.",
     inclusions: [
       "1 Night Luxury Houseboat in Srinagar",
@@ -229,7 +229,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg", "Pahalgam"],
     startingPrice: 17999,
     category: "Deluxe Tour",
-    image: "https://images.unsplash.com/photo-1595841696660-35cc59430a3b?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_classic.png",
     overview: "Our most popular tour configuration, linking the scenic heights of Gulmarg, the serene valleys of Pahalgam, and the classic sights of Srinagar.",
     inclusions: [
       "5 Nights accommodation (3N Srinagar, 2N Pahalgam)",
@@ -310,7 +310,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg"],
     startingPrice: 18600,
     category: "Standard Tour",
-    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_complete.png",
     overview: "The ultimate 7-day tour that misses nothing. Overnight stays in Houseboat, Pahalgam, Gulmarg, and Srinagar. Fully loaded with special experiences.",
     inclusions: [
       "6 Nights accommodation (1N Houseboat, 2N Srinagar, 2N Pahalgam, 1N Gulmarg)",
@@ -401,7 +401,7 @@ const packagesData = [
     placesCovered: ["Srinagar", "Gulmarg", "Sonamarg", "Zojila Pass", "Gurez Valley"],
     startingPrice: 24999,
     category: "Adventure Tour",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+    image: "assets/image/pkg_adventure.png",
     overview: "For thrill-seekers and nature lovers. Trek high glaciers, experience snow skiing/boarding in Gulmarg, drive through the rugged Zojila Pass, and camp under the stars in Gurez Valley.",
     inclusions: [
       "6 Nights accommodation (including 1 Night camping in Gurez)",

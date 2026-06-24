@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tour Package Details | KMS Toures&Travels</title>
+  <title>Tour Package Details | KMS Tour & Travels</title>
   <meta name="description" content="View day-wise itinerary, pricing, hotel categories, inclusions, exclusions, and FAQs for your customized Kashmir tour package.">
   
   <!-- Font Awesome Icons -->
@@ -11,51 +11,12 @@
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbar.js"></script>
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container flex justify-between align-center">
-      <div class="contact-info">
-        <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
-        <a href="mailto:info@kmstoures.com"><i class="far fa-envelope"></i> info@kmstoures.com</a>
-      </div>
-      <div class="contact-info">
-        <span><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header & Navbar -->
-  <header>
-    <div class="container navbar flex justify-between align-center">
-      <a href="index.html" class="logo">
-        <h1>KMS Toures&Travels</h1>
-        <p>Discover Paradise on Earth</p>
-      </a>
-      
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="packages.html" class="active">Tour Packages</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="hotels.html">Hotels</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-actions align-center">
-        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+  <!-- Dynamic Navbar component -->
+  <app-navbar></app-navbar>
 
   <!-- Page Banner (Will update background visual dynamically) -->
   <section class="page-banner" id="details-cover-image" style="padding: 100px 0;">
@@ -198,7 +159,7 @@
   <footer>
     <div class="container grid footer-grid">
       <div class="footer-column">
-        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Toures&Travels</h3>
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Tour & Travels</h3>
         <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family group tours, and adventure camping treks across the valley.</p>
         <div class="social-icons-group">
           <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -213,7 +174,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="packages.html">Tour Packages</a></li>
           <li><a href="destinations.html">Popular Destinations</a></li>
-          <li><a href="hotels.html">Hotel Standard Options</a></li>
           <li><a href="gallery.html">Media Gallery</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -241,7 +201,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2026 KMS Toures&Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
+        <p>&copy; 2026 KMS Tour & Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
       </div>
     </div>
   </footer>
@@ -250,6 +210,12 @@
   <a href="#" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Mobile Bottom Contact Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-btn-call"><i class="fas fa-phone-alt"></i> call</a>
+    <a href="https://api.whatsapp.com/send?phone=919876543210" class="mobile-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+  </div>
 
   <!-- JavaScript Files -->
   <script src="assets/js/packages-data.js"></script>

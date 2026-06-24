@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initWhatsAppFloating();
   initPhoneInputsNumericOnly();
-  
+
   // Identify current page and run page-specific logic
   const path = window.location.pathname;
   const page = path.split("/").pop();
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function initMobileMenu() {
   const toggleBtn = document.querySelector(".menu-toggle");
   const navMenu = document.querySelector(".nav-menu");
-  
+
   if (toggleBtn && navMenu) {
     toggleBtn.addEventListener("click", () => {
       navMenu.classList.toggle("active");
@@ -47,6 +47,28 @@ function initMobileMenu() {
         const icon = toggleBtn.querySelector("i");
         if (icon) icon.className = "fas fa-bars";
       }
+    });
+
+    // Mobile dropdown toggles click handler
+    const dropdownToggles = navMenu.querySelectorAll(".dropdown-toggle");
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = toggle.closest(".dropdown");
+          if (parent) {
+            parent.classList.toggle("active");
+            const chevron = toggle.querySelector("i");
+            if (chevron) {
+              if (parent.classList.contains("active")) {
+                chevron.className = "fas fa-chevron-up";
+              } else {
+                chevron.className = "fas fa-chevron-down";
+              }
+            }
+          }
+        }
+      });
     });
   }
 }
@@ -106,6 +128,136 @@ function initHomePage() {
       handleInquirySubmission(homeInquiryForm, "", "email");
     });
   }
+
+  // New Hero Plan Journey Form submission
+  const heroJourneyForm = document.getElementById("hero-journey-form");
+  if (heroJourneyForm) {
+    heroJourneyForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      handleInquirySubmission(heroJourneyForm, "", "email");
+    });
+  }
+
+  // Initialize mobile testimonial carousel
+  initTestimonialCarousel();
+}
+
+/* Mobile Testimonial Auto-Scroll Carousel */
+function initTestimonialCarousel() {
+  const grid = document.querySelector(".testimonials-grid");
+  const dotsContainer = document.getElementById("testimonial-dots");
+  if (!grid || !dotsContainer) return;
+
+  const cards = grid.querySelectorAll(".testimonial-card");
+  if (cards.length === 0) return;
+
+  let currentIndex = 0;
+  let autoScrollInterval = null;
+  let resumeTimeout = null;
+  const AUTO_SCROLL_DELAY = 4000; // 4 seconds per slide
+  const RESUME_DELAY = 6000; // Resume auto-scroll after 6s of inactivity
+
+  // Create dot indicators
+  function buildDots() {
+    dotsContainer.innerHTML = "";
+    cards.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "dot" + (i === 0 ? " active" : "");
+      dot.setAttribute("aria-label", `Go to review ${i + 1}`);
+      dot.addEventListener("click", () => {
+        goToSlide(i);
+        pauseAndResume();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // Update active dot
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll(".dot");
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  // Scroll to a specific slide
+  function goToSlide(index) {
+    currentIndex = index;
+    const scrollLeft = cards[index].offsetLeft - grid.offsetLeft;
+    grid.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    updateDots();
+  }
+
+  // Advance to next slide (right to left movement)
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    goToSlide(currentIndex);
+  }
+
+  // Start auto-scrolling
+  function startAutoScroll() {
+    stopAutoScroll();
+    autoScrollInterval = setInterval(nextSlide, AUTO_SCROLL_DELAY);
+  }
+
+  // Stop auto-scrolling
+  function stopAutoScroll() {
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = null;
+    }
+  }
+
+  // Pause auto-scroll and resume after delay
+  function pauseAndResume() {
+    stopAutoScroll();
+    if (resumeTimeout) clearTimeout(resumeTimeout);
+    resumeTimeout = setTimeout(startAutoScroll, RESUME_DELAY);
+  }
+
+  // Sync dots on manual scroll (swipe)
+  let scrollEndTimer = null;
+  grid.addEventListener("scroll", () => {
+    if (scrollEndTimer) clearTimeout(scrollEndTimer);
+    scrollEndTimer = setTimeout(() => {
+      // Detect which card is most visible
+      const scrollLeft = grid.scrollLeft;
+      const gridWidth = grid.offsetWidth;
+      let closestIndex = 0;
+      let closestDist = Infinity;
+      cards.forEach((card, i) => {
+        const cardCenter = card.offsetLeft - grid.offsetLeft + card.offsetWidth / 2;
+        const dist = Math.abs(scrollLeft + gridWidth / 2 - cardCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestIndex = i;
+        }
+      });
+      if (closestIndex !== currentIndex) {
+        currentIndex = closestIndex;
+        updateDots();
+      }
+    }, 100);
+  });
+
+  // Pause on touch interactions
+  grid.addEventListener("touchstart", pauseAndResume, { passive: true });
+
+  // Only activate carousel behavior on mobile
+  function checkAndInit() {
+    if (window.innerWidth <= 768) {
+      buildDots();
+      startAutoScroll();
+    } else {
+      stopAutoScroll();
+      dotsContainer.innerHTML = "";
+    }
+  }
+
+  checkAndInit();
+  window.addEventListener("resize", () => {
+    checkAndInit();
+  });
 }
 
 /* Packages Page Specific Functions */
@@ -113,7 +265,7 @@ function initPackagesPage() {
   const container = document.getElementById("all-packages-container");
   const filterBtns = document.querySelectorAll(".filter-btn");
   const searchInput = document.getElementById("package-search-input");
-  
+
   if (!container || typeof packagesData === "undefined") return;
 
   // Retrieve query param 'q' if redirect from home search
@@ -151,7 +303,7 @@ function initPackagesPage() {
 
     // Filter by category
     if (activeCategory !== "all") {
-      filtered = filtered.filter(pkg => 
+      filtered = filtered.filter(pkg =>
         pkg.category.toLowerCase().includes(activeCategory.toLowerCase())
       );
     }
@@ -159,8 +311,8 @@ function initPackagesPage() {
     // Filter by keyword
     if (searchKeyword) {
       const kw = searchKeyword.toLowerCase();
-      filtered = filtered.filter(pkg => 
-        pkg.name.toLowerCase().includes(kw) || 
+      filtered = filtered.filter(pkg =>
+        pkg.name.toLowerCase().includes(kw) ||
         pkg.overview.toLowerCase().includes(kw) ||
         pkg.placesCovered.some(p => p.toLowerCase().includes(kw))
       );
@@ -184,7 +336,7 @@ function initPackagesPage() {
 function createPackageCardHtml(pkg) {
   // Format places covered text
   const placesText = pkg.placesCovered.join(" • ");
-  
+
   // Select badge class
   let badgeClass = "standard";
   if (pkg.category.toLowerCase().includes("budget")) badgeClass = "budget";
@@ -391,30 +543,52 @@ function initContactPage() {
 function handleInquirySubmission(form, packageName = "", mode = "email") {
   const formData = new FormData(form);
   const name = formData.get("name") || "";
-  const phone = "+91 " + (formData.get("phone") || "");
+
+  // Format phone number properly if it already includes country code
+  let phoneRaw = formData.get("phone") || "";
+  const phone = phoneRaw.startsWith("+") ? phoneRaw : (phoneRaw.startsWith("91") && phoneRaw.length > 10 ? "+" + phoneRaw : "+91 " + phoneRaw);
+
   const email = formData.get("email") || "";
+  const destination = formData.get("destination") || "";
   const travelDate = formData.get("travel_date") || "Not Specified";
   const travelers = formData.get("travelers") || "1";
   const userMessage = formData.get("message") || "";
 
   // Build inquiry context
-  const pkgContext = packageName ? `Package: ${packageName}` : `General Tour Inquiry`;
+  let pkgContext = packageName ? `Package: ${packageName}` : `General Tour Inquiry`;
+  if (destination) {
+    pkgContext += ` (Destination: ${destination})`;
+  }
 
   // Construct subject and body for Email (mailto)
   const subject = `KMS Tour & Travels Inquiry - ${pkgContext}`;
+
+  // Assemble dynamic details list
+  let detailsBlock = `Context: ${pkgContext}
+Name: ${name}
+Phone: ${phone}`;
+
+  if (destination) {
+    detailsBlock += `\nDestination: ${destination}`;
+  }
+  if (email) {
+    detailsBlock += `\nEmail: ${email}`;
+  }
+
+  detailsBlock += `\nTravel Date: ${travelDate}
+Number of Travelers: ${travelers}`;
+
+  if (userMessage) {
+    detailsBlock += `\nCustomer Message: ${userMessage}`;
+  }
+
   const mailBody = `Hello KMS Tour & Travels,
 
 I would like to submit a booking inquiry.
 
 Inquiry details:
 -----------------------------------
-Context: ${pkgContext}
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Travel Date: ${travelDate}
-Number of Travelers: ${travelers}
-Customer Message: ${userMessage}
+${detailsBlock}
 -----------------------------------
 
 Please provide availability and custom pricing plans.
@@ -423,7 +597,7 @@ Thank you.`;
 
   const originalButton = form.querySelector(".btn-email");
   const originalButtonText = originalButton ? originalButton.innerHTML : "Submit";
-  
+
   if (originalButton) {
     originalButton.disabled = true;
     originalButton.style.opacity = "0.7";
@@ -435,8 +609,8 @@ Thank you.`;
     showSuccessModal(() => {
       const encodedSubject = encodeURIComponent(subject);
       const encodedBody = encodeURIComponent(mailBody);
-      window.location.href = `mailto:info@kmstoures.com?subject=${encodedSubject}&body=${encodedBody}`;
-      
+      window.location.href = `mailto:shubhamworkkms@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+
       // Reset form & button
       form.reset();
       if (originalButton) {
@@ -451,7 +625,7 @@ Thank you.`;
 /* Premium Success Modal Manager (5 seconds stay) */
 function showSuccessModal(onComplete) {
   let modal = document.getElementById("custom-success-modal");
-  
+
   if (!modal) {
     modal = document.createElement("div");
     modal.id = "custom-success-modal";

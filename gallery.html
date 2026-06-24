@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KMS Toures&Travels | Media Gallery</title>
+  <title>KMS Tour & Travels | Media Gallery</title>
   <meta name="description" content="Explore beautiful travel photos of Dal Lake, Gulmarg, Pahalgam, and active adventure camping tours. View customer memory slides.">
   
   <!-- Font Awesome Icons -->
@@ -18,51 +18,12 @@
       display: none;
     }
   </style>
+  <script src="assets/js/navbar.js"></script>
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container flex justify-between align-center">
-      <div class="contact-info">
-        <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
-        <a href="mailto:info@kmstoures.com"><i class="far fa-envelope"></i> info@kmstoures.com</a>
-      </div>
-      <div class="contact-info">
-        <span><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header & Navbar -->
-  <header>
-    <div class="container navbar flex justify-between align-center">
-      <a href="index.html" class="logo">
-        <h1>KMS Toures&Travels</h1>
-        <p>Discover Paradise on Earth</p>
-      </a>
-      
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="packages.html">Tour Packages</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="hotels.html">Hotels</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-actions align-center">
-        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+  <!-- Dynamic Navbar component -->
+  <app-navbar></app-navbar>
 
   <!-- Page Banner -->
   <section class="page-banner">
@@ -93,65 +54,241 @@
       <!-- Gallery Grid -->
       <div class="grid gallery-grid" id="gallery-items-container">
         
-        <!-- Dal Lake (Destinations) -->
+        <!-- Dal Lake Sunset (Destinations) -->
         <div class="gallery-item" data-category="destinations">
-          <img src="https://images.unsplash.com/photo-1595841696660-35cc59430a3b?auto=format&fit=crop&w=600&q=80" alt="Dal Lake Houseboat">
+          <img src="assets/image/gallery/gallery_1.png" alt="Scenic Sunset over Dal Lake Srinagar">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Gondola (Activities) -->
-        <div class="gallery-item" data-category="activities">
-          <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=600&q=80" alt="Gulmarg Gondola Ride">
+        <!-- Gulmarg Meadows (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_2.png" alt="Lush Green Gulmarg Meadows and Pine Forests">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Couples (Memories) -->
+        <!-- Shikara Group (Memories) -->
         <div class="gallery-item" data-category="memories">
-          <img src="https://images.unsplash.com/photo-1590053413809-51c385115c6e?auto=format&fit=crop&w=600&q=80" alt="Couples in Shalimar Bagh">
+          <img src="assets/image/gallery/gallery_3.png" alt="Happy Tourists Enjoying Dal Lake Shikara Ride">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Sledge (Activities) -->
-        <div class="gallery-item" data-category="activities">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Snow Skiing Gulmarg">
-          <div class="gallery-item-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-        </div>
-
-        <!-- Sonamarg (Destinations) -->
+        <!-- Pahalgam Lidder River (Destinations) -->
         <div class="gallery-item" data-category="destinations">
-          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" alt="Sonamarg Meadows">
+          <img src="assets/image/gallery/gallery_4.png" alt="Crystal Clear Lidder River in Pahalgam Valley">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Family group (Memories) -->
+        <!-- Sonamarg Glacier (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_5.png" alt="Majestic Thajiwas Glacier in Sonamarg">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Trekking Group (Memories) -->
         <div class="gallery-item" data-category="memories">
-          <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=600&q=80" alt="Family Shikara Ride">
+          <img src="assets/image/gallery/gallery_6.png" alt="Diverse Backpackers Trekking Kashmir Mountains">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Trekking (Activities) -->
+        <!-- Gondola Ascent (Activities) -->
         <div class="gallery-item" data-category="activities">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Glacier Trek Sonamarg">
+          <img src="assets/image/gallery/gallery_7.png" alt="Gulmarg Cable Car Gondola Ascending Peaks">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
         </div>
 
-        <!-- Houseboats (Destinations) -->
+        <!-- Honeymoon Houseboat (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_8.png" alt="Room Decoration in Luxury Houseboat Honeymoon Setup">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Yusmarg Trails (Destinations) -->
         <div class="gallery-item" data-category="destinations">
-          <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80" alt="Houseboat wood carvings">
+          <img src="assets/image/gallery/gallery_9.png" alt="Yusmarg Meadow of Jesus Hills and Pine Trails">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Doodhpathri Streams (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_10.png" alt="Doodhpathri Valley of Milk Streams and Meadows">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Gurez Offroad Adventure (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_11.png" alt="Offroad 4x4 SUV Safari Gurez Border Valley">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Sinthan Top Curve (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_12.png" alt="Winding Alpine Road Curves on Sinthan Top Pass">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Family Shikara Ride (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_13.png" alt="Family Vacation Memories in Kashmir Valley">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Gurez Valley Peak (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_14.png" alt="Habba Khatoon Peak Gurez Valley landscape">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Boating activity (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_15.png" alt="Traditional Shikara Boat Rowing on Dal Lake">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Alpine Glacier Peaks (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_16.png" alt="Stunning Panoramic Himalayan Snow Peaks">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Srinagar Sunset Houseboat (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_17.png" alt="Dal Lake Sunset with Traditional Houseboats Srinagar">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Group Sightseeing (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_18.png" alt="Friends Posing During Dal Lake Sightseeing tour">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Group Sightseeing Warm (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_19.png" alt="Tourist Group Enjoying the Warm Afternoon in Srinagar">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Gulmarg Pines (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_22.png" alt="Towering Coniferous Pine Trees in Gulmarg Kashmir">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Hiking Trails (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_20.png" alt="Backpackers Hiking in Pristine Kashmir Alpine wilderness">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Lidder River bank (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_23.png" alt="Lidder River rapids flowing over boulders Pahalgam">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Thajiwas Sledge Excursion (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_24.png" alt="Glacier snow sledge ride activity in Sonamarg">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Gurez Valley Camping (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_27.png" alt="Riverside Camping Adventure in Gurez border area">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Doodhpathri Meadows (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_26.png" alt="Shaliganga river stones and green fields Doodhpathri">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Yusmarg Pine Forests (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_25.png" alt="Lush Green Pine Ridge Forest Yusmarg Kashmir">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Houseboat Sunset Retreat (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_21.png" alt="Couples Houseboat Interior Overlooking Dal Lake">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Sinthan Snowy Pass view (Destinations) -->
+        <div class="gallery-item" data-category="destinations">
+          <img src="assets/image/gallery/gallery_30.png" alt="Panoramic views of snow peaks from Sinthan Top road">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Family Picnic Meadow (Memories) -->
+        <div class="gallery-item" data-category="memories">
+          <img src="assets/image/gallery/gallery_28.png" alt="Family having a fun picnic in Kashmir valley meadows">
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+
+        <!-- Dal Lake Cruise sunset (Activities) -->
+        <div class="gallery-item" data-category="activities">
+          <img src="assets/image/gallery/gallery_29.png" alt="Sightseeing boat tour on Dal Lake under sunset sky">
           <div class="gallery-item-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
@@ -165,7 +302,7 @@
   <footer>
     <div class="container grid footer-grid">
       <div class="footer-column">
-        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Toures&Travels</h3>
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Tour & Travels</h3>
         <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family group tours, and adventure camping treks across the valley.</p>
         <div class="social-icons-group">
           <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -180,7 +317,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="packages.html">Tour Packages</a></li>
           <li><a href="destinations.html">Popular Destinations</a></li>
-          <li><a href="hotels.html">Hotel Standard Options</a></li>
           <li><a href="gallery.html">Media Gallery</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -208,7 +344,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2026 KMS Toures&Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
+        <p>&copy; 2026 KMS Tour & Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
       </div>
     </div>
   </footer>
@@ -217,6 +353,12 @@
   <a href="#" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Mobile Bottom Contact Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-btn-call"><i class="fas fa-phone-alt"></i> call</a>
+    <a href="https://api.whatsapp.com/send?phone=919876543210" class="mobile-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+  </div>
 
   <!-- JavaScript Filter logic -->
   <script>

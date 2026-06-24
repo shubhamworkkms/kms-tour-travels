@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kashmir Destinations Guide | KMS Toures&Travels</title>
+  <title>Kashmir Destinations Guide | KMS Tour & Travels</title>
   <meta name="description" content="Explore popular travel destinations in Kashmir: Srinagar, Gulmarg, Pahalgam, Sonamarg, and Gurez Valley. Check top attractions and guidelines.">
   
   <!-- Font Awesome Icons -->
@@ -11,51 +11,12 @@
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbar.js"></script>
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container flex justify-between align-center">
-      <div class="contact-info">
-        <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
-        <a href="mailto:info@kmstoures.com"><i class="far fa-envelope"></i> info@kmstoures.com</a>
-      </div>
-      <div class="contact-info">
-        <span><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header & Navbar -->
-  <header>
-    <div class="container navbar flex justify-between align-center">
-      <a href="index.html" class="logo">
-        <h1>KMS Toures&Travels</h1>
-        <p>Discover Paradise on Earth</p>
-      </a>
-      
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="packages.html">Tour Packages</a>
-        <a href="destinations.html" class="active">Destinations</a>
-        <a href="hotels.html">Hotels</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-actions align-center">
-        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+  <!-- Dynamic Navbar component -->
+  <app-navbar></app-navbar>
 
   <!-- Page Banner -->
   <section class="page-banner">
@@ -80,7 +41,7 @@
         <!-- Srinagar Row -->
         <div class="grid dest-row">
           <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1595841696660-35cc59430a3b?auto=format&fit=crop&w=800&q=80" alt="Srinagar">
+            <img src="assets/image/srinagar.png" alt="Srinagar">
           </div>
           <div class="dest-text-content">
             <h2>Srinagar - The Summer Capital</h2>
@@ -97,7 +58,7 @@
         <!-- Gulmarg Row -->
         <div class="grid dest-row">
           <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=800&q=80" alt="Gulmarg">
+            <img src="assets/image/gulmarg.png" alt="Gulmarg">
           </div>
           <div class="dest-text-content">
             <h2>Gulmarg - The Meadow of Flowers</h2>
@@ -114,7 +75,7 @@
         <!-- Pahalgam Row -->
         <div class="grid dest-row">
           <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1590053413809-51c385115c6e?auto=format&fit=crop&w=800&q=80" alt="Pahalgam">
+            <img src="assets/image/pahalgam.png" alt="Pahalgam">
           </div>
           <div class="dest-text-content">
             <h2>Pahalgam - The Valley of Shepherds</h2>
@@ -131,7 +92,7 @@
         <!-- Sonamarg Row -->
         <div class="grid dest-row">
           <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80" alt="Sonamarg">
+            <img src="assets/image/sonamarg.png" alt="Sonamarg">
           </div>
           <div class="dest-text-content">
             <h2>Sonamarg - The Meadow of Gold</h2>
@@ -148,7 +109,7 @@
         <!-- Gurez Valley Row -->
         <div class="grid dest-row">
           <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Gurez Valley">
+            <img src="assets/image/gurez.png" alt="Gurez Valley">
           </div>
           <div class="dest-text-content">
             <h2>Gurez Valley - The Hidden Paradise</h2>
@@ -170,7 +131,7 @@
   <footer>
     <div class="container grid footer-grid">
       <div class="footer-column">
-        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Toures&Travels</h3>
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Tour & Travels</h3>
         <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family group tours, and adventure camping treks across the valley.</p>
         <div class="social-icons-group">
           <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -185,7 +146,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="packages.html">Tour Packages</a></li>
           <li><a href="destinations.html">Popular Destinations</a></li>
-          <li><a href="hotels.html">Hotel Standard Options</a></li>
           <li><a href="gallery.html">Media Gallery</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -213,7 +173,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2026 KMS Toures&Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
+        <p>&copy; 2026 KMS Tour & Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
       </div>
     </div>
   </footer>
@@ -222,6 +182,12 @@
   <a href="#" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Mobile Bottom Contact Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-btn-call"><i class="fas fa-phone-alt"></i> call</a>
+    <a href="https://api.whatsapp.com/send?phone=919876543210" class="mobile-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+  </div>
 
   <!-- JavaScript Files -->
   <script src="assets/js/packages-data.js"></script>

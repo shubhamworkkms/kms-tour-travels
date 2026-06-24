@@ -3,59 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | KMS Toures&Travels</title>
-  <meta name="description" content="Learn more about KMS Toures & Travels. Certified local tour operators in Srinagar, offering custom packages, local expert drivers, and quality hotels.">
+  <title>About Us | KMS Tour & Travels</title>
+  <meta name="description" content="Learn more about KMS Tour & Travels. Certified local tour operators in Srinagar, offering custom packages, local expert drivers, and quality hotels.">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/navbar.js"></script>
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container flex justify-between align-center">
-      <div class="contact-info">
-        <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
-        <a href="mailto:info@kmstoures.com"><i class="far fa-envelope"></i> info@kmstoures.com</a>
-      </div>
-      <div class="contact-info">
-        <span><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header & Navbar -->
-  <header>
-    <div class="container navbar flex justify-between align-center">
-      <a href="index.html" class="logo">
-        <h1>KMS Toures&Travels</h1>
-        <p>Discover Paradise on Earth</p>
-      </a>
-      
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="packages.html">Tour Packages</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="hotels.html">Hotels</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html" class="active">About Us</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-actions align-center">
-        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-        <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+  <!-- Dynamic Navbar component -->
+  <app-navbar></app-navbar>
 
   <!-- Page Banner -->
   <section class="page-banner">
@@ -69,13 +30,13 @@
 
   <!-- Company Profile Section -->
   <section class="section-padding">
-    <div class="container grid" style="grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center;">
-      <div>
+    <div class="container grid about-profile-container" style="grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center;">
+      <div class="about-profile-content">
         <h2 style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px;">Your Trusted Local Kashmir Experts</h2>
-        <p style="color: #334155; margin-bottom: 18px; font-size: 1.05rem;">At KMS Toures&Travels, we believe that traveling should be personal, local, and stress-free. Established directly in Srinagar, our team is comprised of local Kashmiri travel coordinators, professional transport drivers, and native guides who know the hidden meadows and high-altitude passes better than anyone.</p>
+        <p style="color: #334155; margin-bottom: 18px; font-size: 1.05rem;">At KMS Tour & Travels, we believe that traveling should be personal, local, and stress-free. Established directly in Srinagar, our team is comprised of local Kashmiri travel coordinators, professional transport drivers, and native guides who know the hidden meadows and high-altitude passes better than anyone.</p>
         <p style="color: #334155; margin-bottom: 24px; font-size: 1.05rem;">We have built long-standing networks with local houseboats, boutique hotel owners, and adventure camping vendors to offer high-quality service at transparent, budget-friendly rates. From honeymoons to school adventure groups, we tailor every itinerary to suit your pace.</p>
         
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+        <div class="grid about-vision-mission" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
           <div>
             <h4 style="color: var(--primary-color); margin-bottom: 6px;"><i class="fas fa-eye" style="color:var(--secondary-color); margin-right:8px;"></i> Our Vision</h4>
             <p style="font-size: 0.9rem; color: var(--text-muted)">To represent authentic Kashmiri hospitality globally and provide every traveler with deep memories that last forever.</p>
@@ -87,7 +48,7 @@
         </div>
       </div>
       
-      <div>
+      <div class="about-profile-image">
         <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=800&q=80" alt="About KMS Tour Travels" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
       </div>
     </div>
@@ -125,7 +86,7 @@
   <footer>
     <div class="container grid footer-grid">
       <div class="footer-column">
-        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Toures&Travels</h3>
+        <h3 style="color: var(--text-light); font-size: 1.3rem; margin-bottom: 15px;">KMS Tour & Travels</h3>
         <p>We are a certified, local Kashmiri tour operator specializing in custom-built itineraries, honeymoons, family group tours, and adventure camping treks across the valley.</p>
         <div class="social-icons-group">
           <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -140,7 +101,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="packages.html">Tour Packages</a></li>
           <li><a href="destinations.html">Popular Destinations</a></li>
-          <li><a href="hotels.html">Hotel Standard Options</a></li>
           <li><a href="gallery.html">Media Gallery</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -168,7 +128,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2026 KMS Toures&Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
+        <p>&copy; 2026 KMS Tour & Travels. All Rights Reserved. Managed and Operated in Srinagar, Kashmir. Let Kashmir Create Memories That Last Forever.</p>
       </div>
     </div>
   </footer>
@@ -177,6 +137,12 @@
   <a href="#" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Mobile Bottom Contact Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919876543210" class="mobile-btn-call"><i class="fas fa-phone-alt"></i> call</a>
+    <a href="https://api.whatsapp.com/send?phone=919876543210" class="mobile-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+  </div>
 
   <!-- JavaScript Files -->
   <script src="assets/js/packages-data.js"></script>
