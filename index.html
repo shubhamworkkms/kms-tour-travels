@@ -299,62 +299,31 @@
     </div>
   </section>
 
-  <!-- Quick Inquiry Form Section -->
-  <section class="section-padding quick-inquiry-section">
-    <div class="container grid inquiry-wrapper">
-      <div class="inquiry-info">
-        <h2>Book Your Kashmir Dream Vacation Today</h2>
-        <p>Planning a trip to Kashmir? Let our destination specialists design the perfect customized package for your
-          budget and timeline.</p>
-        <ul class="inquiry-bullets">
-          <li><i class="fas fa-check-circle"></i> 100% Custom Travel Itinerary</li>
-          <li><i class="fas fa-check-circle"></i> Direct WhatsApp Support Connect</li>
-          <li><i class="fas fa-check-circle"></i> Local Expert Drivers & Guided Visits</li>
-          <li><i class="fas fa-check-circle"></i> Instant Free Customized Quotes</li>
-        </ul>
-      </div>
 
-      <div class="inquiry-form-card" id="quick-inquiry">
-        <h3>Send Free Inquiry</h3>
-        <form id="home-inquiry-form">
-          <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
-          </div>
-          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <div class="phone-input-group">
-                <span class="phone-prefix">+91</span>
-                <input type="tel" name="phone" class="form-control" placeholder="10-digit mobile number" required
-                  pattern="[0-9]{10}" maxlength="10" inputmode="numeric"
-                  title="Please enter a valid 10-digit mobile number">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-          </div>
-          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
-            <div class="form-group">
-              <label for="travel_date">Travel Date *</label>
-              <input type="date" name="travel_date" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="travelers">No of Travelers</label>
-              <input type="number" name="travelers" class="form-control" min="1" value="2">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Requirements / Message</label>
-            <textarea name="message" class="form-control" rows="3"
-              placeholder="Tell us about your budget, interest areas (Honeymoon, Family, Adventure)..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-email" id="home-email-btn"
-            style="width: 100%; margin-top: 15px;"><i class="far fa-envelope"></i> Submit Tour Inquiry</button>
-        </form>
-      </div>
+  <!-- ═══════════════════════════════════════════
+       10. CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="cta-banner" aria-labelledby="cta-heading"
+    style="position: relative; padding: 6rem 0; overflow: hidden; text-align: center; color: white;">
+    <div class="cta-banner__bg" style="position: absolute; inset: 0; z-index: -2;">
+      <img src="assets\image\gallery\gallery_6.png" alt="" aria-hidden="true" loading="lazy"
+        style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="cta-banner__overlay" aria-hidden="true"
+        style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.5);"></div>
+    </div>
+    <div class="container cta-banner__content" style="position: relative; z-index: 1;">
+      <h2 id="cta-heading" class="text-headline-xl cta-banner__title"
+        style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">
+        Ready to Explore Kashmir?
+      </h2>
+      <p class="text-body-lg cta-banner__desc"
+        style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: white;">
+        Connect with our travel specialists to receive a personalized tour plan and a competitive quote.
+      </p>
+      <a href="contact.html" class="btn btn-primary"
+        style="padding: 1rem 2.5rem; font-size: 1rem; font-weight: bold; text-transform: uppercase;" id="cta-plan-btn">
+        REQUEST A QUOTE NOW
+      </a>
     </div>
   </section>
 

@@ -10,11 +10,8 @@ const packagesData = [
     overview: "Experience the ultimate quick getaway to Kashmir. Explore the charm of Srinagar's Dal Lake and the snow-capped peak excursions in Gulmarg in just 3 days.",
     inclusions: [
       "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
-      "Daily Breakfast & Dinner",
-      "Dal Lake Shikara Ride (1 Hour)",
+      "Daily Breakfast",
       "Private Cab for Sightseeing",
-      "Mughal Gardens Entry",
-      "Airport Pickup & Drop",
       "Local Support & Customer Assistance"
     ],
     exclusions: [
@@ -22,7 +19,11 @@ const packagesData = [
       "Lunch, snacks, and personal mineral water",
       "Tips, insurance, laundry, phone calls",
       "Airfare or Train fare",
-      "Local guide fees or pony rides"
+      "Local guide fees or pony rides",
+      "Dinner",
+      "Dal Lake Shikara Ride (1 Hour)",
+      "Mughal Gardens Entry",
+      "Airport Pickup & Drop"
     ],
     prices: {
       budget: 8999,
@@ -34,24 +35,24 @@ const packagesData = [
         day: 1,
         title: "Arrival in Srinagar & Sightseeing",
         travelTime: "Airport to Hotel (30-45 Minutes)",
-        places: ["Dal Lake", "Shikara Ride", "Nishat Garden", "Shalimar Garden", "Nehru Park", "Nigeen Lake"],
-        desc: "Meet our representative at Srinagar Airport and transfer to your hotel/houseboat. In the afternoon, enjoy a romantic 1-hour Shikara ride on Dal Lake. Later, visit the famous Mughal Gardens including Nishat Bagh (Garden of Pleasure) and Shalimar Bagh (Abode of Love) built by Jahangir. Overnight stay in Srinagar.",
+        places: ["Dal Lake", "Nehru Park", "Char Chinar", "Kabutar Khana", "Nishat Bagh", "Shalimar Bagh"],
+        desc: "Arrival in Srinagar. Enjoy Shikara Ride, Sunset Photography, and Local Market Visit. Meet our representative at Srinagar Airport and transfer to your hotel/houseboat. Overnight stay in Srinagar.",
         stay: "Srinagar"
       },
       {
         day: 2,
-        title: "Gulmarg Day Excursion",
+        title: "Gulmarg Adventure",
         travelTime: "Srinagar to Gulmarg (2 Hours each way)",
-        places: ["Tangmarg", "Gulmarg Valley", "Gondola Ride Point", "Golf Course", "Snow Point"],
-        desc: "After breakfast, proceed for a full-day excursion to Gulmarg (Meadow of Flowers). Admire the scenic drive via Tangmarg. In Gulmarg, enjoy the world's second-highest cable car (Gondola ride) up to Phase 1 (Kongdoori) and Phase 2 (Apharwat Peak). Visit the historic golf course and capture stunning pictures of snow peaks. Return to Srinagar for overnight stay.",
+        places: ["Gulmarg", "Gulmarg Gondola", "Apharwat Peak"],
+        desc: "Gulmarg Day Trip. Enjoy Gondola Ride, Snow Activities, ATV Ride (Seasonal), and Skiing (Winter). Return to Srinagar for overnight stay.",
         stay: "Srinagar"
       },
       {
         day: 3,
-        title: "Srinagar Sightseeing & Departure",
+        title: "Departure",
         travelTime: "Hotel to Airport (45 Minutes)",
-        places: ["Tulip Garden (Seasonal)", "Local Market shopping"],
-        desc: "Enjoy a hearty breakfast, pack your bags, and check out. If time permits, visit the Indira Gandhi Memorial Tulip Garden (seasonal) or shop for authentic Kashmiri handicrafts, pashmina shawls, and dry fruits in Lal Chowk or local bazaar. Transfer to Srinagar Airport for your onward flight with wonderful memories.",
+        places: ["Srinagar Airport Drop"],
+        desc: "Transfer and Srinagar Airport Drop. Package Ends with Sweet Memories.",
         stay: "Departure"
       }
     ],
@@ -64,25 +65,26 @@ const packagesData = [
     id: "family-5d",
     name: "Kashmir Family Tour",
     duration: "4 Nights / 5 Days",
-    placesCovered: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg"],
+    placesCovered: ["Srinagar", "Sonamarg", "Pahalgam", "Gulmarg"],
     startingPrice: 16300,
     category: "Family Tour",
     image: "assets/image/pkg_family.png",
     overview: "A perfectly paced, comfortable tour of the top destinations in Kashmir, ideal for families, kids, and senior citizens looking for premium comfort and beautiful memories.",
     inclusions: [
-      "4 Nights accommodation (Srinagar base/Houseboat)",
-      "Daily Breakfast & Dinner at all hotels",
-      "All transfers & sightseeing in comfortable private sedan/SUV",
-      "Driver Allowance, parking, toll taxes, fuel",
-      "Shikara Ride on Dal Lake",
-      "24x7 local support coordinator"
+      "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
+      "Daily Breakfast",
+      "Private Cab for Sightseeing",
+      "Local Support & Customer Assistance"
     ],
     exclusions: [
       "Gondola tickets, pony rides, local guide services",
       "Aru Valley, Betaab Valley local cabs in Pahalgam (JK Govt rules)",
       "Thajiwas Glacier sledge/pony in Sonamarg",
       "Lunch, laundry, personal items",
-      "Any entry tickets to monuments or gardens"
+      "Any entry tickets to monuments or gardens",
+      "Dinner",
+      "Driver Allowance, parking, toll taxes, fuel",
+      "Shikara Ride on Dal Lake"
     ],
     prices: {
       budget: 16300,
@@ -92,42 +94,42 @@ const packagesData = [
     itinerary: [
       {
         day: 1,
-        title: "Srinagar Arrival & Mughal Gardens",
+        title: "Arrival in Srinagar",
         travelTime: "Airport to Hotel (30-45 Minutes)",
-        places: ["Dal Lake", "Nishat Garden", "Shalimar Garden"],
-        desc: "Arrive at Srinagar. Check in to your hotel/houseboat. Proceed to visit Nishat Garden, Shalimar Garden, and witness the beautiful sunset over the lake. Enjoy dinner at your hotel. Night stay in Srinagar.",
+        places: ["Dal Lake", "Nehru Park", "Char Chinar", "Kabutar Khana", "Nishat Bagh", "Shalimar Bagh"],
+        desc: "Arrival in Srinagar. Enjoy Shikara Ride, Sunset Photography, and Local Market Visit. Check in to your hotel/houseboat. Dinner and night stay in Srinagar.",
         stay: "Srinagar"
       },
       {
         day: 2,
-        title: "Gulmarg Excursion",
-        travelTime: "Srinagar to Gulmarg (2 Hours each way)",
-        places: ["Tangmarg", "Gondola Ride", "Snow Activities"],
-        desc: "Drive to Gulmarg after breakfast. Capture pictures at the scenic Tangmarg view point. In Gulmarg, opt for Gondola cable car ride (Phase 1 & 2) and try snow sports like sledging or skiing if snow is available. Return to Srinagar for dinner and overnight stay.",
+        title: "Sonamarg Day Trip",
+        travelTime: "Srinagar to Sonamarg (3 Hours each way)",
+        places: ["Sonamarg", "Thajiwas Glacier", "Sindh River"],
+        desc: "Full day excursion to Sonamarg. Enjoy Horse Riding, Glacier Visit, and Photography. Return to Srinagar for dinner and night stay.",
         stay: "Srinagar"
       },
       {
         day: 3,
         title: "Pahalgam Tour",
         travelTime: "Srinagar to Pahalgam (2.5 Hours each way)",
-        places: ["Betaab Valley", "Aru Valley", "Lidder River", "Apple Valley"],
-        desc: "Depart for Pahalgam (Valley of Shepherds) after breakfast. Cruise through Apple Orchards and Saffron fields. In Pahalgam, hire a local cab to visit the stunning Betaab Valley (where many Bollywood movies were shot) and Aru Valley. Take a peaceful stroll along the Lidder River. Return to Srinagar for overnight stay.",
+        places: ["Pahalgam", "Aru Valley", "Betaab Valley", "Lidder River"],
+        desc: "Visit the beautiful Pahalgam. Enjoy Horse Riding, Valley Sightseeing, and River Photography. Return to Srinagar for overnight stay.",
         stay: "Srinagar"
       },
       {
         day: 4,
-        title: "Sonamarg Tour",
-        travelTime: "Srinagar to Sonamarg (3 Hours each way)",
-        places: ["Sonamarg", "Thajiwas Glacier", "Sindh Valley"],
-        desc: "Embark on a full-day tour to Sonamarg (Meadow of Gold). Walk along the roaring Sindh River. Hire ponies or local sledges to see the Thajiwas Glacier. The scenic backdrop is ideal for family photos. Return to Srinagar for dinner and night stay.",
+        title: "Gulmarg Adventure",
+        travelTime: "Srinagar to Gulmarg (2 Hours each way)",
+        places: ["Gulmarg", "Gulmarg Gondola", "Apharwat Peak"],
+        desc: "Head to Gulmarg. Enjoy Gondola Ride, Snow Activities, ATV Ride (Seasonal), and Skiing (Winter). Return to Srinagar for dinner and overnight stay.",
         stay: "Srinagar"
       },
       {
         day: 5,
-        title: "Departure from Srinagar",
+        title: "Departure",
         travelTime: "Hotel to Airport (45 Minutes)",
-        places: ["Shankaracharya Temple", "Lal Chowk Market"],
-        desc: "Visit the historical Shankaracharya Temple on a hilltop for a panoramic view of Srinagar. Shop for souvenirs at Lal Chowk before heading to the airport for your return journey home.",
+        places: ["Srinagar Airport Drop"],
+        desc: "Transfer and Srinagar Airport Drop. Package Ends with Sweet Memories.",
         stay: "Departure"
       }
     ],
@@ -140,27 +142,27 @@ const packagesData = [
     id: "honeymoon-6d",
     name: "Romantic Kashmir Honeymoon Package",
     duration: "5 Nights / 6 Days",
-    placesCovered: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg"],
+    placesCovered: ["Srinagar", "Sonamarg", "Pahalgam", "Gulmarg"],
     startingPrice: 28668,
     category: "Honeymoon Tour",
     image: "assets/image/pkg_honeymoon.png",
     overview: "A romantic, specially curated journey for couples. Features private luxury cab, candlelit dinners, room decorations, houseboat stay, and overnight stays in snowy Gulmarg and scenic Pahalgam.",
     inclusions: [
-      "1 Night Luxury Houseboat in Srinagar",
-      "2 Nights Mountain View Hotel in Pahalgam",
-      "1 Night Cozy Snow-View Resort in Gulmarg",
-      "1 Night Premium Hotel in Srinagar",
-      "Daily Buffet Breakfast & Romantic Dinners",
-      "1 Candle Light Dinner & Complimentary Cake",
-      "Room Flower Decoration once during stay",
-      "Private SUV (Innova/similar) for the entire tour",
-      "All toll, parking, and driver allowances"
+      "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
+      "Daily Breakfast",
+      "Private Cab for Sightseeing",
+      "Local Support & Customer Assistance"
     ],
     exclusions: [
       "Gondola ride tickets",
       "Horse/Pony rides in Baisaran Valley or Sonamarg",
       "Pahalgam local union cab sightseeing",
-      "Lunch, personal drinks, shopping, tips"
+      "Lunch, personal drinks, shopping, tips",
+      "Romantic Dinners",
+      "1 Candle Light Dinner & Complimentary Cake",
+      "Room Flower Decoration once during stay",
+      "All toll, parking, and driver allowances",
+      "1 Night Luxury Houseboat in Srinagar"
     ],
     prices: {
       budget: 28668,
@@ -170,50 +172,50 @@ const packagesData = [
     itinerary: [
       {
         day: 1,
-        title: "Arrival + Romantic Houseboat & Shikara Ride",
-        travelTime: "Airport to Houseboat (40 Minutes)",
-        places: ["Dal Lake", "Houseboat", "Shikara Sunset Ride"],
-        desc: "On arrival, transfer to your decorated premium Houseboat on Dal Lake. Check-in and relax. In the evening, enjoy a private 2-hour Shikara ride covering floating markets and Char Chinar. Overnight stay in Houseboat with a special candlelit dinner.",
-        stay: "Srinagar (Houseboat)"
+        title: "Arrival in Srinagar",
+        travelTime: "Airport to Hotel/Houseboat",
+        places: ["Dal Lake", "Nehru Park", "Char Chinar", "Kabutar Khana", "Nishat Bagh", "Shalimar Bagh"],
+        desc: "Arrival in Srinagar. Enjoy Shikara Ride, Sunset Photography, and Local Market Visit. Relax in a luxury room with a romantic candle-lit dinner. Night Stay in Srinagar.",
+        stay: "Srinagar"
       },
       {
         day: 2,
-        title: "Srinagar Local Sightseeing",
-        travelTime: "Srinagar City Tour",
-        places: ["Nishat Garden", "Shalimar Garden", "Chashme Shahi", "Pari Mahal"],
-        desc: "Relish your breakfast and check out from the houseboat. Transfer to hotel. Visit the historical Mughal Gardens, Shalimar Bagh, Chashme Shahi, and the terraced Pari Mahal (Abode of Fairies) offering romantic sunset views. Night stay in Srinagar.",
+        title: "Sonamarg Day Trip",
+        travelTime: "Srinagar to Sonamarg (3 Hours each way)",
+        places: ["Sonamarg", "Thajiwas Glacier", "Sindh River"],
+        desc: "Romantic day trip to Sonamarg. Enjoy Horse Riding, Glacier Visit, and couple Photography by the river. Night Stay in Srinagar.",
         stay: "Srinagar"
       },
       {
         day: 3,
-        title: "Srinagar to Gulmarg (Overnight stay)",
-        travelTime: "Srinagar to Gulmarg (2 Hours)",
-        places: ["Gulmarg Valley", "Gondola ride", "Snow Point"],
-        desc: "Travel to Gulmarg. Check in to your hotel amidst pine forests. Take the Gondola Cable car. Enjoy some quality private snow time. Relish a warm Kashmiri tea (Kahwa). Dinner and overnight stay in Gulmarg.",
-        stay: "Gulmarg"
+        title: "Pahalgam Tour",
+        travelTime: "Srinagar to Pahalgam (2.5 Hours)",
+        places: ["Pahalgam", "Aru Valley", "Betaab Valley", "Lidder River"],
+        desc: "Drive to Pahalgam. Enjoy Horse Riding, Valley Sightseeing, and River Photography. Enjoy a romantic evening with a candle-lit dinner. Night Stay in Pahalgam.",
+        stay: "Pahalgam"
       },
       {
         day: 4,
-        title: "Gulmarg to Pahalgam (Overnight stay)",
-        travelTime: "Gulmarg to Pahalgam (4 Hours)",
-        places: ["Lidder River", "Betaab Valley check-in", "Saffron fields"],
-        desc: "After breakfast, take a scenic drive to Pahalgam. Enroute, visit Saffron fields in Pampore and Avantipura ruins. Check in to your luxury riverside hotel in Pahalgam. Relax beside the Lidder River. Overnight stay in Pahalgam.",
-        stay: "Pahalgam"
+        title: "Gulmarg Adventure",
+        travelTime: "Pahalgam to Gulmarg",
+        places: ["Gulmarg", "Gulmarg Gondola", "Apharwat Peak"],
+        desc: "Travel to Gulmarg. Enjoy Gondola Ride, Snow Activities, ATV Ride (Seasonal), and Skiing (Winter). Relax in your luxury room. Night Stay in Gulmarg.",
+        stay: "Gulmarg"
       },
       {
         day: 5,
-        title: "Pahalgam Local Sightseeing",
-        travelTime: "Pahalgam Day Trip",
-        places: ["Aru Valley", "Chandanwari", "Baisaran Valley (Mini Switzerland)"],
-        desc: "Post breakfast, visit Aru Valley, Chandanwari (start point of Amarnath Yatra), and hire ponies to Baisaran Valley (known as Mini Switzerland for its beautiful pine meadows). Enjoy a quiet evening walking around Pahalgam market. Night stay in Pahalgam.",
-        stay: "Pahalgam"
+        title: "Srinagar Local Sightseeing & Houseboat",
+        travelTime: "Gulmarg to Srinagar",
+        places: ["Apple Garden", "Handicraft Manufacturing Unit", "Dry Fruit Market", "Lal Chowk Market", "Houseboat Stay"],
+        desc: "Explore Srinagar's local markets, Apple Orchards, and Kashmiri Handicraft Experience. Check-in to a beautiful Houseboat with a candle-lit dinner. Night Stay in Srinagar (Houseboat).",
+        stay: "Srinagar (Houseboat)"
       },
       {
         day: 6,
-        title: "Pahalgam to Srinagar Airport Departure",
-        travelTime: "Pahalgam to Airport (3 Hours)",
-        places: ["Departure transfer"],
-        desc: "Enjoy a final breakfast in Pahalgam. Drive back to Srinagar Airport directly for your flight back home, carrying lifetime romantic memories.",
+        title: "Departure",
+        travelTime: "Houseboat to Airport",
+        places: ["Srinagar Airport Drop"],
+        desc: "Transfer and Srinagar Airport Drop. Package Ends with Sweet Memories.",
         stay: "Departure"
       }
     ],
@@ -232,17 +234,19 @@ const packagesData = [
     image: "assets/image/pkg_classic.png",
     overview: "Our most popular tour configuration, linking the scenic heights of Gulmarg, the serene valleys of Pahalgam, and the classic sights of Srinagar.",
     inclusions: [
-      "5 Nights accommodation (3N Srinagar, 2N Pahalgam)",
-      "Daily Breakfast & Dinner",
-      "Private cab for the entire duration",
-      "Shikara ride on Dal Lake",
-      "All tolls, parking fees, and driver allowances"
+      "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
+      "Daily Breakfast",
+      "Private Cab for Sightseeing",
+      "Local Support & Customer Assistance"
     ],
     exclusions: [
       "Flight tickets",
       "Sightseeing entry tickets to gardens",
       "Gondola and local transport fees",
-      "Expenses of personal nature"
+      "Expenses of personal nature",
+      "Dinner",
+      "Shikara ride on Dal Lake",
+      "All tolls, parking fees, and driver allowances"
     ],
     prices: {
       budget: 17999,
@@ -313,19 +317,21 @@ const packagesData = [
     image: "assets/image/pkg_complete.png",
     overview: "The ultimate 7-day tour that misses nothing. Overnight stays in Houseboat, Pahalgam, Gulmarg, and Srinagar. Fully loaded with special experiences.",
     inclusions: [
-      "6 Nights accommodation (1N Houseboat, 2N Srinagar, 2N Pahalgam, 1N Gulmarg)",
-      "Daily Breakfast & Dinner",
-      "Private Deluxe Cab (Innova/Etios/similar)",
-      "1-Hour Shikara Ride on Dal Lake",
-      "Bonfire Night once in Pahalgam",
-      "Mughal Garden entrance tickets",
-      "Airport pick and drop services"
+      "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
+      "Daily Breakfast",
+      "Private Cab for Sightseeing",
+      "Local Support & Customer Assistance"
     ],
     exclusions: [
       "Flights or train tickets",
       "Gondola tickets, pony rides, local guide services",
       "Local union cabs in Pahalgam",
-      "Lunch and personal tips"
+      "Lunch and personal tips",
+      "Dinner",
+      "1-Hour Shikara Ride on Dal Lake",
+      "Bonfire Night once in Pahalgam",
+      "Mughal Garden entrance tickets",
+      "Airport pick and drop services"
     ],
     prices: {
       budget: 18600,
@@ -404,18 +410,21 @@ const packagesData = [
     image: "assets/image/pkg_adventure.png",
     overview: "For thrill-seekers and nature lovers. Trek high glaciers, experience snow skiing/boarding in Gulmarg, drive through the rugged Zojila Pass, and camp under the stars in Gurez Valley.",
     inclusions: [
-      "6 Nights accommodation (including 1 Night camping in Gurez)",
-      "Daily Breakfast & Dinner",
-      "Special 4x4 Offroad SUV for high altitude travel (Zojila / Gurez)",
-      "Trekking guide for Thajiwas Glacier",
-      "Camping equipment (Tents, sleeping bags, mats)",
-      "All permits for Gurez Valley and border areas"
+      "Hotel Accommodation in 3 Star / 4 Star / 5 Star (as selected)",
+      "Daily Breakfast",
+      "Private Cab for Sightseeing",
+      "Local Support & Customer Assistance"
     ],
     exclusions: [
       "Skiing/Snowboarding equipment hire and training costs",
       "Gondola ride tickets",
       "Rafting fees in Sonamarg/Pahalgam",
-      "Flight tickets"
+      "Flight tickets",
+      "Dinner",
+      "Special 4x4 Offroad SUV for high altitude travel (Zojila / Gurez)",
+      "Trekking guide for Thajiwas Glacier",
+      "Camping equipment (Tents, sleeping bags, mats)",
+      "All permits for Gurez Valley and border areas"
     ],
     prices: {
       budget: 24999,
